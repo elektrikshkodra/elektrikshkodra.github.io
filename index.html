@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="sq">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shkodra Elektrik | Elektricistë në Shkodër</title>
+<meta name="description" content="Shkodra Elektrik: instalime elektrike, riparime, kuadro elektrike, ndriçim, projektim dhe zbatim në Shkodër dhe rrethinat. 5 vite garanci. Tel: +355 69 236 5891.">
+<meta name="theme-color" content="#0B2A4A">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Electrician",
+  "name": "Shkodra Elektrik",
+  "telephone": ["+355692365891", "+355672932572"],
+  "email": "elektrikshkodra@gmail.com",
+  "areaServed": "Shkodër dhe rrethinat",
+  "description": "Instalime elektrike, riparime, kuadro elektrike, ndriçim, projektim dhe zbatim në Shkodër."
+}
+</script>
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 8px; }
+body { margin: 0; background: #F5F3EC; color: #0B2A4A; font-family: 'Inter', system-ui, sans-serif; line-height: 1.5; }
+a { color: #0B2A4A; }
+a:hover { color: #1E88E5; }
+h1, h2, h3 { font-family: 'Space Grotesk', system-ui, sans-serif; margin: 0; }
+p { margin: 0; }
+img { max-width: 100%; }
+.wrap { max-width: 1200px; margin: 0 auto; }
+
+/* header */
+.site-header { background: #0B2A4A; padding: 14px 24px; }
+.site-header .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+.brand { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+.brand img { height: 56px; width: auto; border-radius: 10px; display: block; }
+.brand-name { display: flex; flex-direction: column; gap: 4px; }
+.brand-name b { font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 22px; letter-spacing: 0.04em; line-height: 1; color: #FFFFFF; }
+.brand-name span { font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.34em; line-height: 1; color: #FFB020; }
+.nav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; }
+.nav a { color: #FFFFFF; text-decoration: none; font-size: 16px; font-weight: 500; padding: 12px 0; }
+.nav a:hover { color: #FFB020; }
+.nav a.cta { background: #FFB020; color: #0B2A4A; font-weight: 600; padding: 12px 22px; border-radius: 10px; }
+.nav a.cta:hover { background: #FFC24D; color: #0B2A4A; }
+
+/* hero */
+.hero { background: #0B2A4A; padding: 24px 24px 72px; }
+.hero .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 48px; }
+.hero-text { flex: 1 1 460px; display: flex; flex-direction: column; gap: 24px; }
+.eyebrow { font-size: 14px; font-weight: 600; letter-spacing: 0.18em; color: #FFB020; }
+.hero h1 { font-size: clamp(36px, 6vw, 56px); line-height: 1.05; font-weight: 700; color: #FFFFFF; }
+.hero p { font-size: 19px; line-height: 1.6; color: #D5E3F2; max-width: 540px; }
+.btns { display: flex; flex-wrap: wrap; gap: 14px; }
+.btn { display: inline-block; text-decoration: none; font-size: 18px; font-weight: 600; padding: 16px 30px; border-radius: 12px; }
+.btn-primary { background: #FFB020; color: #0B2A4A; }
+.btn-primary:hover { background: #FFC24D; color: #0B2A4A; }
+.btn-ghost { border: 2px solid #FFFFFF; color: #FFFFFF; padding: 14px 28px; }
+.btn-ghost:hover { background: #FFFFFF; color: #0B2A4A; }
+.hero-art { flex: 1 1 340px; display: flex; justify-content: center; }
+.hero-art img { width: 100%; max-width: 440px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 28px; display: block; }
+
+/* sections */
+.section { padding: 80px 24px 40px; }
+.section h2 { font-size: clamp(30px, 4vw, 40px); line-height: 1.1; font-weight: 700; }
+.section .lead { margin-top: 12px; font-size: 18px; line-height: 1.6; color: #3B4B5E; max-width: 640px; }
+.section-head { margin-bottom: 36px; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.card { background: #FFFFFF; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 12px; }
+.card i { display: block; width: 44px; height: 6px; border-radius: 3px; background: #1E88E5; }
+.card:nth-child(even) i { background: #F59E0B; }
+.card h3 { font-size: 22px; font-weight: 700; }
+.card p { font-size: 16px; line-height: 1.6; color: #3B4B5E; }
+
+.band { padding: 40px 24px; }
+.band .wrap { background: #0B2A4A; border-radius: 24px; padding: 48px 40px; display: flex; flex-wrap: wrap; gap: 32px 40px; }
+.band .item { flex: 1 1 220px; display: flex; flex-direction: column; gap: 8px; }
+.band .item b { font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 24px; color: #FFB020; }
+.band .item span { font-size: 16px; line-height: 1.6; color: #D5E3F2; }
+
+/* slider */
+.slider { width: 100%; max-width: 960px; margin: 0 auto; }
+.viewport { position: relative; overflow: hidden; border-radius: 20px; aspect-ratio: 4 / 3; background: #0B2A4A; touch-action: pan-y; }
+.track { display: flex; height: 100%; transition: transform 0.4s ease; }
+.slide { flex: 0 0 100%; position: relative; height: 100%; overflow: hidden; margin: 0; }
+.slide .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: blur(28px) brightness(0.6); transform: scale(1.15); }
+.slide .fg { position: relative; display: block; width: 100%; height: 100%; padding-bottom: 50px; object-fit: contain; }
+.slide figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 14px 20px; background: rgba(11, 42, 74, 0.82); color: #FFFFFF; font-size: 15px; font-weight: 500; }
+.arrow { position: absolute; top: 50%; margin-top: -24px; width: 48px; height: 48px; border-radius: 50%; border: 0; background: rgba(255, 255, 255, 0.92); color: #0B2A4A; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.arrow:hover { background: #FFFFFF; }
+.arrow.prev { left: 12px; }
+.arrow.next { right: 12px; }
+.dots { display: flex; flex-wrap: wrap; justify-content: center; margin-top: 8px; }
+.dots button { width: 44px; height: 44px; border: 0; background: none; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.dots button span { display: block; width: 12px; height: 12px; border-radius: 50%; background: #B9B4A3; }
+.dots button[aria-current="true"] span { background: #0B2A4A; }
+:focus-visible { outline: 3px solid #1E88E5; outline-offset: 2px; }
+
+/* steps */
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+.step { border-top: 4px solid #1E88E5; padding-top: 18px; display: flex; flex-direction: column; gap: 10px; }
+.step:nth-child(even) { border-top-color: #F59E0B; }
+.step small { font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 18px; font-weight: 700; color: #1E88E5; }
+.step:nth-child(even) small { color: #B45309; }
+.step h3 { font-size: 22px; font-weight: 700; }
+.step p { font-size: 16px; line-height: 1.6; color: #3B4B5E; }
+
+/* contact */
+.contact { padding: 60px 24px 80px; }
+.contact .wrap { background: #FFB020; border-radius: 24px; padding: 48px 40px; display: flex; flex-wrap: wrap; gap: 36px 56px; }
+.contact .col { flex: 1 1 360px; display: flex; flex-direction: column; gap: 18px; }
+.contact h2 { font-size: clamp(30px, 4vw, 40px); line-height: 1.1; }
+.contact p { font-size: 18px; line-height: 1.6; }
+.contact .label { font-size: 14px; font-weight: 600; letter-spacing: 0.12em; }
+.contact .big { display: block; padding: 4px 0; font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 28px; font-weight: 700; color: #0B2A4A; text-decoration: none; }
+.contact .mid { display: block; padding: 4px 0; font-size: 20px; font-weight: 600; color: #0B2A4A; text-decoration: none; overflow-wrap: anywhere; }
+.contact a:hover { text-decoration: underline; color: #0B2A4A; }
+
+.site-footer { background: #0B2A4A; padding: 28px 24px; }
+.site-footer .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+.site-footer b { font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 18px; letter-spacing: 0.04em; color: #FFFFFF; }
+.site-footer span { font-size: 15px; color: #D5E3F2; }
+
+@media (max-width: 600px) {
+  .section { padding-top: 56px; }
+  .band .wrap, .contact .wrap { padding: 32px 24px; }
+  .slide figcaption { font-size: 14px; padding: 10px 14px; }
+  .slide .fg { padding-bottom: 42px; }
+  .contact .big { font-size: 24px; }
+  .dots button { width: 36px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .track { transition: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#" aria-label="Shkodra Elektrik, faqja kryesore">
+      <img src="logo-ve.jpg" alt="Logo Shkodra Elektrik" width="72" height="56">
+      <span class="brand-name"><b>SHKODRA</b><span>ELEKTRIK</span></span>
+    </a>
+    <nav class="nav" aria-label="Menuja kryesore">
+      <a href="#sherbimet">Shërbimet</a>
+      <a href="#punimet">Punimet</a>
+      <a href="#si-punojme">Si punojmë</a>
+      <a class="cta" href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-text">
+      <div class="eyebrow">ELEKTRICISTË NË SHKODËR</div>
+      <h1>Instalime dhe riparime elektrike, të bëra me siguri.</h1>
+      <p>Brigada jonë punon në Shkodër dhe rrethinat: banesa, biznese dhe ndërtime të reja. Çmim i qartë para se të fillojmë dhe punë e pastër në çdo instalim.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="#kontakt">Na telefononi</a>
+        <a class="btn btn-ghost" href="#sherbimet">Shihni shërbimet</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img src="logo.jpg" alt="Logo Shkodra Elektrik me monogramin VE" width="440" height="440">
+    </div>
+  </div>
+</section>
+
+<section class="section" id="sherbimet">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Shërbimet tona</h2>
+      <p class="lead">Nga një prizë e re te instalimi i plotë i një banese.</p>
+    </div>
+    <div class="cards">
+      <div class="card"><i></i><h3>Instalime elektrike</h3><p>Instalim elektrik për banesa, dyqane e ndërtime të reja, me priza dhe çelësa.</p></div>
+      <div class="card"><i></i><h3>Riparime dhe defekte</h3><p>Ikën dritat, bie automati, ka shkëndija ose nuk punon një prizë? Gjejmë defektin dhe e rregullojmë.</p></div>
+      <div class="card"><i></i><h3>Kuadro elektrike dhe automatë</h3><p>Montim, zëvendësim dhe rregullim i kuadrove elektrike, me automatë të përshtatshëm për ngarkesën tuaj.</p></div>
+      <div class="card"><i></i><h3>Ndriçim</h3><p>Montim llambash, spote, ndriçim LED dhe ndriçim për oborre e ambiente të jashtme.</p></div>
+      <div class="card"><i></i><h3>Kontroll i instalimit</h3><p>Kontrollojmë instalimin ekzistues dhe ju tregojmë çfarë është në rregull e çfarë duhet përmirësuar.</p></div>
+      <div class="card"><i></i><h3>Projektim dhe zbatim</h3><p>Projektojmë instalimin elektrik sipas nevojave tuaja dhe e zbatojmë deri në fund, nga plani te puna e gatshme.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-label="Pse ne">
+  <div class="wrap">
+    <div class="item"><b>Çmim i qartë</b><span>Ju themi koston para se të fillojmë punën.</span></div>
+    <div class="item"><b>Punë e pastër</b><span>Punojmë me kujdes dhe e lëmë ambientin të rregullt.</span></div>
+    <div class="item"><b>Garanci</b><span>Punës i japim 5 vite garanci.</span></div>
+  </div>
+</section>
+
+<section class="section" id="punimet">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Punimet tona</h2>
+      <p class="lead">Disa nga punët e kryera nga brigada jonë.</p>
+    </div>
+    <div class="slider" id="slider" role="region" aria-roledescription="karusel" aria-label="Foto të punimeve" tabindex="0">
+      <div class="viewport">
+        <div class="track" id="track">
+          <figure class="slide">
+            <img class="bg" src="kuader-schneider.jpg" alt="" aria-hidden="true">
+            <img class="fg" src="kuader-schneider.jpg" alt="Kuadër elektrik i montuar me automatë Schneider">
+            <figcaption>Kuadër elektrik i montuar me automatë Schneider</figcaption>
+          </figure>
+          <figure class="slide">
+            <img class="bg" src="garderobe-pasqyre.jpg" alt="" aria-hidden="true">
+            <img class="fg" src="garderobe-pasqyre.jpg" alt="Ndriçim LED në garderobë me pasqyrë">
+            <figcaption>Ndriçim LED në garderobë me pasqyrë</figcaption>
+          </figure>
+          <figure class="slide">
+            <img class="bg" src="ambient-tregtar.jpg" alt="" aria-hidden="true" loading="lazy">
+            <img class="fg" src="ambient-tregtar.jpg" alt="Ndriçim me spote dhe shina në ambient tregtar" loading="lazy">
+            <figcaption>Ndriçim me spote dhe shina në ambient tregtar</figcaption>
+          </figure>
+          <figure class="slide">
+            <img class="bg" src="kuti-kuadri.jpg" alt="" aria-hidden="true" loading="lazy">
+            <img class="fg" src="kuti-kuadri.jpg" alt="Kutia e kuadrit elektrik me kabllot e organizuara" loading="lazy">
+            <figcaption>Kutia e kuadrit elektrik me kabllot e organizuara</figcaption>
+          </figure>
+          <figure class="slide">
+            <img class="bg" src="garderobe.jpg" alt="" aria-hidden="true" loading="lazy">
+            <img class="fg" src="garderobe.jpg" alt="Ndriçim LED në garderobë" loading="lazy">
+            <figcaption>Ndriçim LED në garderobë</figcaption>
+          </figure>
+          <figure class="slide">
+            <img class="bg" src="kabllo-dysheme.jpg" alt="" aria-hidden="true" loading="lazy">
+            <img class="fg" src="kabllo-dysheme.jpg" alt="Kabllot elektrike të organizuara me shirita metalikë" loading="lazy">
+            <figcaption>Kabllot elektrike të organizuara me shirita metalikë</figcaption>
+          </figure>
+          <figure class="slide">
+            <img class="bg" src="biblioteke-tv.jpg" alt="" aria-hidden="true" loading="lazy">
+            <img class="fg" src="biblioteke-tv.jpg" alt="Ndriçim LED në bibliotekë me TV" loading="lazy">
+            <figcaption>Ndriçim LED në bibliotekë me TV</figcaption>
+          </figure>
+          <figure class="slide">
+            <img class="bg" src="kabllo-kuadri.jpg" alt="" aria-hidden="true" loading="lazy">
+            <img class="fg" src="kabllo-kuadri.jpg" alt="Kabllot e organizuara drejt kuadrit elektrik" loading="lazy">
+            <figcaption>Kabllot e organizuara drejt kuadrit elektrik</figcaption>
+          </figure>
+        </div>
+        <button class="arrow prev" id="prev" type="button" aria-label="Foto e mëparshme">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 5 8 12 15 19"></polyline></svg>
+        </button>
+        <button class="arrow next" id="next" type="button" aria-label="Foto tjetër">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 5 16 12 9 19"></polyline></svg>
+        </button>
+      </div>
+      <div class="dots" id="dots"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="si-punojme">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Si punojmë</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><small>1</small><h3>Na telefononi</h3><p>Na tregoni çfarë punë keni dhe ku ndodhet.</p></div>
+      <div class="step"><small>2</small><h3>Oferta</h3><p>Vijmë, shohim punën dhe ju japim çmimin e qartë.</p></div>
+      <div class="step"><small>3</small><h3>Puna</h3><p>E kryejmë me kohë dhe sipas marrëveshjes.</p></div>
+      <div class="step"><small>4</small><h3>Garancia</h3><p>Punës i japim 5 vite garanci.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="kontakt">
+  <div class="wrap">
+    <div class="col">
+      <h2>Na kontaktoni</h2>
+      <p>Telefononi dhe do t'ju kthejmë përgjigje sa më shpejt.</p>
+    </div>
+    <div class="col">
+      <div>
+        <div class="label">TELEFON</div>
+        <a class="big" href="tel:+355692365891">+355 69 236 5891</a>
+        <a class="big" href="tel:+355672932572">+355 67 293 2572</a>
+      </div>
+      <div>
+        <div class="label">ZONA E SHËRBIMIT</div>
+        <div class="mid">Shkodër dhe rrethinat</div>
+      </div>
+      <div>
+        <div class="label">ORARI</div>
+        <div class="mid">08:00 – 17:00</div>
+      </div>
+      <div>
+        <div class="label">EMAIL</div>
+        <a class="mid" href="mailto:elektrikshkodra@gmail.com">elektrikshkodra@gmail.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <b>SHKODRA ELEKTRIK</b>
+    <span>Shërbime elektrike në Shkodër</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var track = document.getElementById('track');
+  var slider = document.getElementById('slider');
+  var dotsBox = document.getElementById('dots');
+  var n = track.children.length;
+  var i = 0;
+  var dots = [];
+
+  for (var k = 0; k < n; k++) {
+    (function (k) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('aria-label', 'Foto ' + (k + 1));
+      b.appendChild(document.createElement('span'));
+      b.addEventListener('click', function () { go(k); });
+      dotsBox.appendChild(b);
+      dots.push(b);
+    })(k);
+  }
+
+  function go(k) {
+    i = (k + n) % n;
+    track.style.transform = 'translateX(' + (-100 * i) + '%)';
+    for (var d = 0; d < n; d++) {
+      if (d === i) dots[d].setAttribute('aria-current', 'true');
+      else dots[d].removeAttribute('aria-current');
+    }
+  }
+
+  document.getElementById('prev').addEventListener('click', function () { go(i - 1); });
+  document.getElementById('next').addEventListener('click', function () { go(i + 1); });
+
+  slider.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') { go(i - 1); e.preventDefault(); }
+    if (e.key === 'ArrowRight') { go(i + 1); e.preventDefault(); }
+  });
+
+  var startX = null;
+  var startY = null;
+  slider.addEventListener('touchstart', function (e) {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+  }, { passive: true });
+  slider.addEventListener('touchend', function (e) {
+    if (startX === null) return;
+    var dx = e.changedTouches[0].clientX - startX;
+    var dy = e.changedTouches[0].clientY - startY;
+    startX = null;
+    if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) go(dx < 0 ? i + 1 : i - 1);
+  }, { passive: true });
+
+  go(0);
+})();
+</script>
+</body>
+</html>
