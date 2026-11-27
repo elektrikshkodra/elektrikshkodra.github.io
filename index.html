@@ -17,6 +17,7 @@
   "name": "Shkodra Elektrik",
   "telephone": ["+355692365891", "+355672932572"],
   "email": "elektrikshkodra@gmail.com",
+  "openingHours": "Mo-Fr 08:00-17:00",
   "areaServed": "Shkodër dhe rrethinat",
   "description": "Instalime elektrike, riparime, kuadro elektrike, ndriçim, projektim dhe zbatim në Shkodër."
 }
@@ -68,7 +69,7 @@ img { max-width: 100%; }
 .section .lead { margin-top: 12px; font-size: 18px; line-height: 1.6; color: #3B4B5E; max-width: 640px; }
 .section-head { margin-bottom: 36px; }
 
-.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 20px; }
 .card { background: #FFFFFF; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 12px; }
 .card i { display: block; width: 44px; height: 6px; border-radius: 3px; background: #1E88E5; }
 .card:nth-child(even) i { background: #F59E0B; }
@@ -87,7 +88,7 @@ img { max-width: 100%; }
 .track { display: flex; height: 100%; transition: transform 0.4s ease; }
 .slide { flex: 0 0 100%; position: relative; height: 100%; overflow: hidden; margin: 0; }
 .slide .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: blur(28px) brightness(0.6); transform: scale(1.15); }
-.slide .fg { position: relative; display: block; width: 100%; height: 100%; padding-bottom: 50px; object-fit: contain; }
+.slide .fg { position: relative; display: block; width: 100%; height: 100%; padding-bottom: 50px; object-fit: contain; cursor: zoom-in; }
 .slide figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 14px 20px; background: rgba(11, 42, 74, 0.82); color: #FFFFFF; font-size: 15px; font-weight: 500; }
 .arrow { position: absolute; top: 50%; margin-top: -24px; width: 48px; height: 48px; border-radius: 50%; border: 0; background: rgba(255, 255, 255, 0.92); color: #0B2A4A; cursor: pointer; display: flex; align-items: center; justify-content: center; }
 .arrow:hover { background: #FFFFFF; }
@@ -95,15 +96,28 @@ img { max-width: 100%; }
 .arrow.next { right: 12px; }
 .dots { display: flex; flex-wrap: wrap; justify-content: center; margin-top: 8px; }
 .dots button { width: 44px; height: 44px; border: 0; background: none; cursor: pointer; display: flex; align-items: center; justify-content: center; }
-.dots button span { display: block; width: 12px; height: 12px; border-radius: 50%; background: #B9B4A3; }
+.dots button span { display: block; width: 12px; height: 12px; border-radius: 50%; background: #8A8575; }
 .dots button[aria-current="true"] span { background: #0B2A4A; }
 :focus-visible { outline: 3px solid #1E88E5; outline-offset: 2px; }
 
+
+/* lightbox */
+.lightbox { position: fixed; inset: 0; z-index: 100; background: rgba(5, 16, 30, 0.97); display: none; flex-direction: column; align-items: center; justify-content: center; padding: 64px 12px 16px; }
+.lightbox.open { display: flex; }
+.lightbox img { max-width: 100%; max-height: calc(100vh - 130px); max-height: calc(100dvh - 130px); object-fit: contain; border-radius: 8px; }
+.lightbox p { color: #FFFFFF; font-size: 15px; margin-top: 12px; text-align: center; }
+.lb-btn { position: absolute; width: 48px; height: 48px; border-radius: 50%; border: 0; background: rgba(255, 255, 255, 0.92); color: #0B2A4A; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.lb-btn:hover { background: #FFFFFF; }
+.lb-close { top: 8px; right: 8px; }
+.lb-prev { left: 8px; top: 50%; margin-top: -24px; }
+.lb-next { right: 8px; top: 50%; margin-top: -24px; }
+body.lb-lock { overflow: hidden; }
+
 /* steps */
-.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 20px; }
 .step { border-top: 4px solid #1E88E5; padding-top: 18px; display: flex; flex-direction: column; gap: 10px; }
 .step:nth-child(even) { border-top-color: #F59E0B; }
-.step small { font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 18px; font-weight: 700; color: #1E88E5; }
+.step small { font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 18px; font-weight: 700; color: #1565C0; }
 .step:nth-child(even) small { color: #B45309; }
 .step h3 { font-size: 22px; font-weight: 700; }
 .step p { font-size: 16px; line-height: 1.6; color: #3B4B5E; }
@@ -115,8 +129,9 @@ img { max-width: 100%; }
 .contact h2 { font-size: clamp(30px, 4vw, 40px); line-height: 1.1; }
 .contact p { font-size: 18px; line-height: 1.6; }
 .contact .label { font-size: 14px; font-weight: 600; letter-spacing: 0.12em; }
-.contact .big { display: block; padding: 4px 0; font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 28px; font-weight: 700; color: #0B2A4A; text-decoration: none; }
+.contact .big { display: block; padding: 4px 0; font-family: 'Space Grotesk', system-ui, sans-serif; font-size: clamp(20px, 6.4vw, 28px); font-weight: 700; color: #0B2A4A; text-decoration: none; }
 .contact .mid { display: block; padding: 4px 0; font-size: 20px; font-weight: 600; color: #0B2A4A; text-decoration: none; overflow-wrap: anywhere; }
+.contact .mail { font-size: clamp(15px, 4.7vw, 20px); white-space: nowrap; overflow-wrap: normal; }
 .contact a:hover { text-decoration: underline; color: #0B2A4A; }
 
 .site-footer { background: #0B2A4A; padding: 28px 24px; }
@@ -126,10 +141,14 @@ img { max-width: 100%; }
 
 @media (max-width: 600px) {
   .section { padding-top: 56px; }
-  .band .wrap, .contact .wrap { padding: 32px 24px; }
+  .nav { gap: 4px 18px; }
+  .nav a { font-size: 15px; }
+  .nav a.cta { padding: 10px 16px; }
+  .band .wrap { padding: 32px 24px; }
+  .contact { padding-left: 16px; padding-right: 16px; }
+  .contact .wrap { padding: 32px 20px; }
   .slide figcaption { font-size: 14px; padding: 10px 14px; }
   .slide .fg { padding-bottom: 42px; }
-  .contact .big { font-size: 24px; }
   .dots button { width: 36px; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -143,7 +162,7 @@ img { max-width: 100%; }
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="#" aria-label="Shkodra Elektrik, faqja kryesore">
-      <img src="logo-ve.webp" alt="Logo Shkodra Elektrik" width="74" height="56">
+      <img src="logo-ve.webp" alt="Logo Shkodra Elektrik" width="72" height="56">
       <span class="brand-name"><b>SHKODRA</b><span>ELEKTRIK</span></span>
     </a>
     <nav class="nav" aria-label="Menuja kryesore">
@@ -292,11 +311,11 @@ img { max-width: 100%; }
       </div>
       <div>
         <div class="label">ORARI</div>
-        <div class="mid">08:00 – 17:00</div>
+        <div class="mid">E hënë – E premte<br>08:00 – 17:00</div>
       </div>
       <div>
         <div class="label">EMAIL</div>
-        <a class="mid" href="mailto:elektrikshkodra@gmail.com">elektrikshkodra@gmail.com</a>
+        <a class="mid mail" href="mailto:elektrikshkodra@gmail.com">elektrikshkodra@gmail.com</a>
       </div>
     </div>
   </div>
@@ -310,14 +329,67 @@ img { max-width: 100%; }
   </div>
 </footer>
 
+<div class="lightbox" id="lb" role="dialog" aria-modal="true" aria-label="Foto e zmadhuar">
+  <button class="lb-btn lb-close" id="lb-close" type="button" aria-label="Mbyll">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="5" x2="19" y2="19"></line><line x1="19" y1="5" x2="5" y2="19"></line></svg>
+  </button>
+  <button class="lb-btn lb-prev" id="lb-prev" type="button" aria-label="Foto e mëparshme">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 5 8 12 15 19"></polyline></svg>
+  </button>
+  <button class="lb-btn lb-next" id="lb-next" type="button" aria-label="Foto tjetër">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 5 16 12 9 19"></polyline></svg>
+  </button>
+  <img id="lb-img" alt="">
+  <p id="lb-cap"></p>
+</div>
+
 <script>
 (function () {
   var track = document.getElementById('track');
   var slider = document.getElementById('slider');
   var dotsBox = document.getElementById('dots');
-  var n = track.children.length;
+  var slides = track.children;
+  var n = slides.length;
   var i = 0;
   var dots = [];
+  var lb = document.getElementById('lb');
+  var lbImg = document.getElementById('lb-img');
+  var lbCap = document.getElementById('lb-cap');
+  var lbClose = document.getElementById('lb-close');
+  var lastFocus = null;
+
+  function isOpen() { return lb.classList.contains('open'); }
+
+  function showLb() {
+    var fg = slides[i].querySelector('.fg');
+    lbImg.src = fg.getAttribute('src');
+    lbImg.alt = fg.getAttribute('alt') || '';
+    lbCap.textContent = slides[i].querySelector('figcaption').textContent;
+  }
+  function openLb() {
+    lastFocus = document.activeElement;
+    showLb();
+    lb.classList.add('open');
+    document.body.classList.add('lb-lock');
+    lbClose.focus();
+  }
+  function closeLb() {
+    lb.classList.remove('open');
+    document.body.classList.remove('lb-lock');
+    lbImg.removeAttribute('src');
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+
+  function go(k) {
+    i = (k + n) % n;
+    track.style.transform = 'translateX(' + (-100 * i) + '%)';
+    for (var d = 0; d < n; d++) {
+      if (d === i) dots[d].setAttribute('aria-current', 'true');
+      else dots[d].removeAttribute('aria-current');
+      slides[d].querySelector('.fg').setAttribute('tabindex', d === i ? '0' : '-1');
+    }
+    if (isOpen()) showLb();
+  }
 
   for (var k = 0; k < n; k++) {
     (function (k) {
@@ -328,39 +400,52 @@ img { max-width: 100%; }
       b.addEventListener('click', function () { go(k); });
       dotsBox.appendChild(b);
       dots.push(b);
-    })(k);
-  }
 
-  function go(k) {
-    i = (k + n) % n;
-    track.style.transform = 'translateX(' + (-100 * i) + '%)';
-    for (var d = 0; d < n; d++) {
-      if (d === i) dots[d].setAttribute('aria-current', 'true');
-      else dots[d].removeAttribute('aria-current');
-    }
+      var fg = slides[k].querySelector('.fg');
+      fg.setAttribute('role', 'button');
+      fg.setAttribute('aria-label', 'Zmadho foton: ' + (fg.getAttribute('alt') || ''));
+      fg.addEventListener('click', function () { if (k === i) openLb(); });
+      fg.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); if (k === i) openLb(); }
+      });
+    })(k);
   }
 
   document.getElementById('prev').addEventListener('click', function () { go(i - 1); });
   document.getElementById('next').addEventListener('click', function () { go(i + 1); });
+  document.getElementById('lb-prev').addEventListener('click', function () { go(i - 1); });
+  document.getElementById('lb-next').addEventListener('click', function () { go(i + 1); });
+  lbClose.addEventListener('click', closeLb);
+  lb.addEventListener('click', function (e) { if (e.target === lb) closeLb(); });
 
   slider.addEventListener('keydown', function (e) {
     if (e.key === 'ArrowLeft') { go(i - 1); e.preventDefault(); }
     if (e.key === 'ArrowRight') { go(i + 1); e.preventDefault(); }
   });
+  document.addEventListener('keydown', function (e) {
+    if (!isOpen()) return;
+    if (e.key === 'Escape') closeLb();
+    if (e.key === 'ArrowLeft') go(i - 1);
+    if (e.key === 'ArrowRight') go(i + 1);
+  });
 
-  var startX = null;
-  var startY = null;
-  slider.addEventListener('touchstart', function (e) {
-    startX = e.touches[0].clientX;
-    startY = e.touches[0].clientY;
-  }, { passive: true });
-  slider.addEventListener('touchend', function (e) {
-    if (startX === null) return;
-    var dx = e.changedTouches[0].clientX - startX;
-    var dy = e.changedTouches[0].clientY - startY;
-    startX = null;
-    if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) go(dx < 0 ? i + 1 : i - 1);
-  }, { passive: true });
+  function swipe(el) {
+    var startX = null;
+    var startY = null;
+    el.addEventListener('touchstart', function (e) {
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+    }, { passive: true });
+    el.addEventListener('touchend', function (e) {
+      if (startX === null) return;
+      var dx = e.changedTouches[0].clientX - startX;
+      var dy = e.changedTouches[0].clientY - startY;
+      startX = null;
+      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) go(dx < 0 ? i + 1 : i - 1);
+    }, { passive: true });
+  }
+  swipe(slider);
+  swipe(lb);
 
   go(0);
 })();
